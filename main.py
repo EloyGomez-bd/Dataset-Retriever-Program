@@ -1,5 +1,7 @@
 import argparse
 from p_acquisition.m_acquisition import data_collection
+from p_wrangling.m_wrangling import create_df_processed
+from p_analysis.m_analysis import analysis
 
 
 def argument_parser():
@@ -27,12 +29,21 @@ def main(arguments):
 
     full_df = data_collection(path=path)
 
-    print('Importing data to directory...')
+    print('Exporting data to directory...')
 
     full_df.to_csv('./data/raw/full_data.csv', index=False)
 
-    print('Finished process...')
+    df_processed = create_df_processed()
 
+    df_processed.to_csv('./data/processed/df_processed.csv', index=False)
+
+    print('Analysing data and exporting data...')
+
+    df_analysed = analysis()
+
+    df_analysed.to_csv('./data/results/df_analysed.csv', index=False)
+
+    print('Finished process...')
 
 
 if __name__ == '__main__':

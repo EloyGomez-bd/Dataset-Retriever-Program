@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 
 def connection_to_db(path):
 
-    print(f'Establishing connection to database from {path}')
+    print(f'Establishing connection to {path}')
 
     engine = create_engine(f'sqlite:///{path}')
 
