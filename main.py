@@ -2,6 +2,7 @@ import argparse
 from p_acquisition.m_acquisition import data_collection
 from p_wrangling.m_wrangling import create_df_processed
 from p_analysis.m_analysis import analysis
+from p_reporting.m_reporting import report
 
 
 def argument_parser():
@@ -43,7 +44,9 @@ def main(arguments):
 
     df_analysed.to_csv('./data/results/df_analysed.csv', index=False)
 
-    print('Finished process...')
+    results = report()
+
+    results.to_csv('./data/results/results.csv', index=False)
 
 
 if __name__ == '__main__':
