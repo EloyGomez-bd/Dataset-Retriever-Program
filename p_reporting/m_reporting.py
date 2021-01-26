@@ -9,11 +9,20 @@ def report():
 
     country = (input('Please introduce a country (\'all\' for complete data): '))
 
-    if country == 'all':
+    list_of_countries = ', '.join(list(data.Country.unique()))
+
+    if country in list(data.Country.unique()):
+        final_data = data[(data.Country == country)]
+        return final_data
+
+    elif country == 'all':
         return data
+
     else:
-        country_filter = data.loc[data['Country'] == country]
-        return country_filter
+        print(f'No data available for {country}. Here is a list of countries: {list_of_countries}.\n')
+        country = (input('Please introduce a country (\'all\' for complete data): '))
+
+
 
 
 

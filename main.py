@@ -46,6 +46,8 @@ def main(arguments):
 
     results = report()
 
+    print('Exporting results')
+
     results.to_csv('./data/results/results.csv', index=False)
 
 
