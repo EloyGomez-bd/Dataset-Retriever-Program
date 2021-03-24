@@ -1,6 +1,6 @@
 # Project Module 1
 
-Repository of Ironhack project module 1.
+Dataset Retriever Program
 
 The main function of the program is to retrieve a clean and wrangled dataset fulfilling the requirements of Challenge 1. Also retrieves two different tables with results of Bonus 1 and Bonus 2 challenges.
 
