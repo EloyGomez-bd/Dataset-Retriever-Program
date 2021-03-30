@@ -1,6 +1,6 @@
 # Dataset Retriever Program
 
-This repository contains Ironhack project corresponding to module 1.
+This repository contains Ironhack project corresponding to module 1 - Building a Pipeline.
 
 The main function of the program is to retrieve a clean and wrangled dataset fulfilling the requirements of Challenge 1. Also retrieves two different tables with results of Bonus 1 and Bonus 2 challenges.
 
